@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+
+    <style>
+        .quest {    
+            background-color: orange;
+            height: 400px;
+            width: 250px;
+        }
+        h2 {
+            margin: 0;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        .score {
+            color: red;
+            text-align: center;
+        }
+        .main {
+            background-image: url("backgroundmain.jpg");
+            height: 1000px;
+            background-repeat: no-repeat;
+        }
+        .flower {
+            position: absolute;
+            left: 1020px;
+            top: 500px;
+        }
+        .bolt {
+            position: absolute;
+            left: 400px;
+            top: 200px;
+        }
+        .heart {
+            position: absolute;
+            left: 400px;
+            top: 700px;
+        }
+        .flashlight {
+            position: absolute;
+            left: 200px;
+            top: 600px;
+        }
+        hr {
+            border: none; /* Убираем границу */
+            background-color: black; /* Цвет линии */
+            color: black; /* Цвет линии для IE6-7 */
+            height: 2px; /* Толщина линии */
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="items">
+            <div class="flower"><img style="width: 50px;" src="flower2.png" alt=""></div>
+            <div class="bolt"><img style="width: 50px;" src="bolt.png" alt=""></div>
+            <div class="heart"><img style="width: 50px;" src="heart.png" alt=""></div>
+            <div class="flashlight"><img style="width: 50px;" src="flashlight.png" alt=""></div>
+        </div>
+        <div class="quest">
+            <h2 class="flower2">Цветок</h2>
+            <h2 class="bolt2">Болт</h2>
+            <h2 class="heart2">Сердечко</h2>
+            <h2 class="flashlight2">Фонарик</h2>
+            <hr>
+            <h2>Очки:</h2>
+            <h1 class="score"></h1>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        let num1 = 0;
+        document.querySelector(".score").innerHTML = num1
+
+
+
+        document.querySelector(".flower").onclick = function() {
+            alert("Молодец!")
+            document.querySelector(".flower").style.display = "none"
+            document.querySelector(".flower2").style.textDecoration = "line-through"
+            num1 = num1+1
+            document.querySelector(".score").innerHTML = num1
+        }
+        document.querySelector(".bolt").onclick = function() {
+            alert("Молодец!")
+            document.querySelector(".bolt").style.display = "none"
+            document.querySelector(".bolt2").style.textDecoration = "line-through"
+            num1 = num1+1
+            document.querySelector(".score").innerHTML = num1
+        }
+        document.querySelector(".heart").onclick = function() {
+            alert("Молодец!")
+            document.querySelector(".heart").style.display = "none"
+            document.querySelector(".heart2").style.textDecoration = "line-through"
+            num1 = num1+1
+            document.querySelector(".score").innerHTML = num1
+        }
+        document.querySelector(".flashlight").onclick = function() {
+            alert("Молодец!")
+            document.querySelector(".flashlight").style.display = "none"
+            document.querySelector(".flashlight2").style.textDecoration = "line-through"
+            num1 = num1+1
+            document.querySelector(".score").innerHTML = num1
+        }
+    </script>
+</body>
+</html>
